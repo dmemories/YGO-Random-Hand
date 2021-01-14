@@ -6,6 +6,7 @@
 	define('PATH_IMG', PATH_PUBLIC . 'images/');
 	define('PATH_CARD', PATH_IMG . 'cards/');
 	define('CARD_SIZE', '150');
+	define('CARD_DECKSIZE', '50');
 
 	define("04178474", "Raigeki Break");
 	define("08240199", "Sage With Eyes of Blue");
@@ -40,6 +41,21 @@
 		public function __construct($deckName, $deckCards) {
 			$this->deckName = $deckName;
 			$this->deckCards = $deckCards;
+		}
+
+		public function displayDeck() {
+			$maxEachRow = 8;
+
+			$resultStr = "<div class='container'><div class='row'>";
+			$count = 0;
+			for ($i = 0; $i < sizeof($this->deckCards); $i++) {
+				if (($count++) == $maxEachRow) {
+					$count = 1;
+					$resultStr .= "</div><div class='row'>";
+				}
+				$resultStr .= "<div class='col-md-1 nopadding'><img src='" . PATH_CARD . $this->deckCards[$i] . ".jpg' class='rounded' style='width: " . CARD_DECKSIZE . "px'/></div>";
+			}
+			echo $resultStr . "</div></div><hr/>";
 		}
 
 		public function displayRandomCards($manyCards) {
@@ -94,6 +110,8 @@
 			"71587526"
 		]
 	);
+
+	$blueEyesDeck->displayDeck();
 
 	$maxRounds = 10;
 	for ($i = 0; $i < $maxRounds; $i++) {
