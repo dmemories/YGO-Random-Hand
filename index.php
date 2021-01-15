@@ -18,6 +18,7 @@
 	define("48800175", "The Melody of Aweakening Dragon");
 	define("71039903", "Stone of Ancient");
 	define("71587526", "Karma Cut");
+	define("79814787", "The White Stone of Legend");
 	define("89631139", "Blue-Eyes White Dragon");
 
 ?>
@@ -99,12 +100,16 @@
 			"89631139",
 			"89631139",
 			"89631139",
-			"39701395",
+			"79814787", // White Stone
+
+			"39701395", // Cards of Consonance
 			"39701395",
 			"39701395",
 			"48800175",
-			"10667321",
-			"10667321",
+			"10667321", // Ancient Rule
+			//"10667321", // Ancient Rule
+
+			//"04178474", // Raigeki
 			"71587526",
 			"71587526",
 			"71587526"
