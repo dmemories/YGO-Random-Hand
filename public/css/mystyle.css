@@ -1,0 +1,24 @@
+body {
+    background-color: rgb(36, 35, 35);
+    color: rgb(212, 208, 208);
+}
+
+.mycard {
+    opacity: 0.98;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+.mycard:hover {
+    filter: brightness(114%);
+}
+
+.sleeves {
+    display: flex;
+    position: relative;
+    background: url(../images/sleeves4.jpg) no-repeat center;
+}
